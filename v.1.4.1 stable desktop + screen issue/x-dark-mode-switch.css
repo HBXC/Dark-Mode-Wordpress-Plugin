@@ -1,0 +1,294 @@
+/* Smooth transitions for background color and text color */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Duration and easing for the transition */
+}
+
+/* Dark mode styling for the entire body */
+body.dark-mode {
+    background-color: #000000; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* --- Dark Mode Switch Styles --- */
+
+/* Container styling for the dark mode switch */
+.x-dark-mode-switch {
+    display: flex; /* Use flexbox layout for the container */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Align items horizontally in the center */
+}
+
+/* Styling the dark mode toggle button */
+#dark-mode-toggle {
+    width: 35px; /* Width of the button */
+    height: 35px; /* Height of the button */
+    background-color: #333; /* Default background color for dark mode */
+    color: #fff; /* Default text color for dark mode */
+    border: 2px solid #444; /* Border color */
+    border-radius: 0; /* 0 for sharp corners (perfect square) */
+    padding: 0; /* Remove padding to maintain square shape */
+    display: flex; /* Use flexbox for centering text/icon */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    font-size: 18px; /* Font size for the icon/text */
+    font-family: Arial, sans-serif; /* Font family */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: background-color 0.3s, color 0.3s; /* Transition effect */
+}
+
+/* Hover effect for the toggle button */
+#dark-mode-toggle:hover {
+    background-color: #fff; /* Background color for dark mode when hovered */
+    color: #333; /* Text color for dark mode when hovered */
+}
+
+/* Dark mode styles for the toggle button */
+body.dark-mode #dark-mode-toggle {
+    background-color: #fff; /* Default background color for light mode */
+    color: #333; /* Default text color for light mode */
+}
+
+/* Hover effect in dark mode */
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #333; /* Background color for light mode when hovered */
+    color: #fff; /* Text color for light mode when hovered */
+}
+
+/* --- Social Media Icon Switching --- */
+
+/* Twitter/X icon in light mode */
+.wp-block-social-links .wp-social-link-x {
+    color: #000; /* Default light mode color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Twitter/X icon in dark mode */
+body.dark-mode .wp-block-social-links .wp-social-link-x {
+    color: #fff; /* Dark mode color */
+}
+
+/* Default light mode legend styling */
+.wp-element-caption {
+    color: #636363; /* Default light mode color */
+    transition: color 0.3s ease; /* Smooth transitions */
+}
+
+/* Dark mode legend styling */
+.dark-mode .wp-element-caption {
+    color: #b6b6b6; /* White color in dark mode */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* --- Dark Mode Styles for Links --- */
+body.dark-mode a {
+    color: #fff; /* Change general link color in dark mode */
+    transition: color 0.3s ease;
+}
+
+/* --- Excluding Social Media Links from Changing in Dark Mode --- */
+.wp-block-social-links a {
+    color: inherit; /* Prevent social links from taking the general link color */
+}
+
+/* Twitter/X icon in light mode */
+.wp-block-social-links .wp-social-link-x {
+    color: #000; /* Default color for Twitter/X in light mode */
+    transition: color 0.3s ease;
+}
+
+/* Twitter/X icon in dark mode */
+body.dark-mode .wp-block-social-links .wp-social-link-x {
+    color: #fff; /* Change to white for Twitter/X in dark mode */
+}
+
+/* Light mode footer */
+footer {
+    background-color: #f1f1f1; /* Light footer background */
+    color: #333; /* Light footer text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark mode footer */
+body.dark-mode footer {
+    background-color: #333; /* Dark footer background */
+    color: #fff; /* Dark footer text color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Light mode header */
+header {
+    background-color: #f1f1f1; /* Light header background */
+    color: #333; /* Light header text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark mode header */
+body.dark-mode header {
+    background-color: #333; /* Dark header background */
+    color: #fff; /* Dark header text color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Dark mode styles */
+body.dark-mode .wp-block-separator {
+    background-color: #e3e3e3; /* Set the separator color to white in dark mode */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* --- General Button Styles --- */
+
+/* Button text color */
+.wp-block-button a.wp-block-button__link {
+    color: #070707; /* Button text color */
+    background-color: #f0e68c; /* Button background color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+.wp-block-button a.wp-block-button__link:hover {
+    background-color: #D1CA86 !important; /* Hover background color */
+    color: #070707 !important; /* Hover text color */
+    transition: color 0.3s ease !important ; /* Smooth transition */
+}
+
+/* Ensuring dark mode toggle button and social media icons are not affected */
+#dark-mode-toggle,
+.wp-block-social-links a {
+    /* Retain the original styles for dark mode toggle button and social media icons */
+}
+
+/* Button styles for light and dark mode */
+.wp-block-button a.wp-block-button__link {
+    color: #070707; /* Text color */
+    background-color: #f0e68c; /* Background color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Light mode text selection (default) */
+::selection {
+    background: #555555; /* Light blue background */
+    color: #fafafa; /* Dark text */
+}
+
+/* Dark mode text selection */
+body.dark-mode ::selection {
+    background: #F0E68C; /* Darker background for selected text */
+    color: #080808; /* Light text */
+}
+
+/* Light mode button text selection */
+button::selection, a.wp-block-button__link::selection {
+    background: #555555; /* Light mode selection background */
+    color: #fafafa; /* Light mode selection text color */
+}
+
+/* Dark mode button text selection */
+body.dark-mode button::selection, body.dark-mode a.wp-block-button__link::selection {
+    background: #555555; /* Same background for dark mode */
+    color: #fafafa; /* Same text color */
+}
+
+/* --- Dark Mode Image Container Styles --- */
+
+/* Container for dark/light mode images */
+.x-dark-mode-image-container {
+    position: relative; /* Keeps child elements positioned relative to this container */
+    height: auto; /* Or set to 100% if needed */
+    width: 100%; /* Takes full width of the parent element */
+    max-width: 100%; /* Ensures it doesn't overflow */
+    overflow: hidden; /* Prevents child elements from overflowing the container */
+    text-align: center; /* Centers images horizontally */
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Light and Dark mode image styling */
+.x-dark-mode-image-container .x-dark-mode-light-image,
+.x-dark-mode-image-container .x-dark-mode-dark-image {
+    display: block; /* Makes the images block elements */
+    width: 100%; /* Ensures the images take full width of the container */
+    height: 100%; /* Ensures the images fill the height of the container */
+    object-fit: cover; /* Ensures images cover the container without distortion */
+    position: absolute; /* Positioned relative to the container */
+    top: 0; /* Aligns the image to the top of the container */
+    left: 0; /* Aligns the image to the left of the container */
+    margin: 0; /* Ensures no margin causes the shift */
+    padding: 0; /* Ensures no padding causes the shift */
+    transition: opacity 0.5s ease; /* Smooth transition for fading effect */
+}
+
+/* Apply image size classes */
+.x-dark-mode-image-container .x-dark-mode-light-image.size-full,
+.x-dark-mode-image-container .x-dark-mode-dark-image.size-full {
+    width: 100%; /* Full size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.x-dark-mode-image-container .x-dark-mode-light-image.size-large,
+.x-dark-mode-image-container .x-dark-mode-dark-image.size-large {
+    max-width: 800px; /* Set max width for large */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.x-dark-mode-image-container .x-dark-mode-light-image.size-medium,
+.x-dark-mode-image-container .x-dark-mode-dark-image.size-medium {
+    max-width: 600px; /* Set max width for medium */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.x-dark-mode-image-container .x-dark-mode-light-image.size-small,
+.x-dark-mode-image-container .x-dark-mode-dark-image.size-small {
+    max-width: 400px; /* Set max width for small */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Initial visibility of images */
+.x-dark-mode-image-container .x-dark-mode-light-image {
+    opacity: 1; /* Light mode image is visible by default */
+    z-index: 1; /* Stacks below the dark mode image by default */
+}
+
+.x-dark-mode-image-container .x-dark-mode-dark-image {
+    opacity: 0; /* Dark mode image is hidden by default */
+    z-index: 2; /* Stacks above the light mode image */
+}
+
+/* Styles when dark mode is enabled */
+body.dark-mode .x-dark-mode-image-container .x-dark-mode-light-image {
+    opacity: 0; /* Hide light mode image in dark mode */
+}
+
+body.dark-mode .x-dark-mode-image-container .x-dark-mode-dark-image {
+    opacity: 1; /* Show dark mode image in dark mode */
+}
+
+/* --- Resize Handle Styles --- */
+
+/* Resize handle styling */
+.x-dark-mode-image-container .resize-handle {
+    position: absolute;
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent handle for visibility */
+    border-radius: 50%; /* Circular handle */
+    cursor: nwse-resize; /* Cursor style for resize */
+    z-index: 1000; /* Ensure it’s above other elements */
+    /* Center the handle */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact center */
+}
+
+/* Optional: Resize handle visibility */
+.x-dark-mode-image-container:hover .resize-handle {
+    display: block; /* Show handle on hover if needed */
+}
+
+/* Hide resize handle by default */
+.x-dark-mode-image-container .resize-handle {
+    display: none; /* Hide by default */
+}
